@@ -1,0 +1,26 @@
+﻿@model IEnumerable<DAI.Models.GetOrganizationsByCriteria>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Get Organizations By Criteria</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Назва_організації)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Назва_організації)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

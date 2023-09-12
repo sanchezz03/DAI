@@ -1,0 +1,69 @@
+﻿@model DAI.Models.TrafficAccident
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>TrafficAccident</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="НомерTrafficAccident" />
+            <div class="form-group">
+                <label asp-for="ДатаTrafficAccident" class="control-label"></label>
+                <input asp-for="ДатаTrafficAccident" class="form-control" />
+                <span asp-validation-for="ДатаTrafficAccident" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="МісцеПодії" class="control-label"></label>
+                <input asp-for="МісцеПодії" class="form-control" />
+                <span asp-validation-for="МісцеПодії" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="КороткийЗміст" class="control-label"></label>
+                <input asp-for="КороткийЗміст" class="form-control" />
+                <span asp-validation-for="КороткийЗміст" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="КількістьПостраждалих" class="control-label"></label>
+                <input asp-for="КількістьПостраждалих" class="form-control" />
+                <span asp-validation-for="КількістьПостраждалих" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="СумаЗбитків" class="control-label"></label>
+                <input asp-for="СумаЗбитків" class="form-control" />
+                <span asp-validation-for="СумаЗбитків" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Причина" class="control-label"></label>
+                <input asp-for="Причина" class="form-control" />
+                <span asp-validation-for="Причина" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ДорожніУмови" class="control-label"></label>
+                <input asp-for="ДорожніУмови" class="form-control" />
+                <span asp-validation-for="ДорожніУмови" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЗникненняВинуватця" class="control-label"></label>
+                <input asp-for="ЗникненняВинуватця" class="form-control" />
+                <span asp-validation-for="ЗникненняВинуватця" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

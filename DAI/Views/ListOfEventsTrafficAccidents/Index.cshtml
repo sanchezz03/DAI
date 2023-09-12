@@ -1,0 +1,41 @@
+﻿@model IEnumerable<DAI.Models.ListOfEventsTrafficAccident>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.КодКатегоріїПодіїNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.НомерTrafficAccidentNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.КодКатегоріїПодіїNavigation.КодКатегорії)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.НомерTrafficAccidentNavigation.НомерTrafficAccident)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.КодЗапису">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.КодЗапису">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.КодЗапису">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

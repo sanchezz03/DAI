@@ -1,0 +1,28 @@
+﻿@model List<DAI.Models.VehicleInfo>
+@{
+    ViewData["Title"] = "Vehicle Information";
+}
+
+<h1>Vehicle Information</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Номер двигуна</th>
+            <th>Кузов</th>
+            <th>Шасі</th>
+            <th>Пройшов техогляд</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var vehicle in Model)
+        {
+            <tr>
+                <td>@vehicle.Номер_двигуна</td>
+                <td>@vehicle.Кузов</td>
+                <td>@vehicle.Шасі</td>
+                <td>@vehicle.Пройшов_техогляд</td>
+            </tr>
+        }
+    </tbody>
+</table>

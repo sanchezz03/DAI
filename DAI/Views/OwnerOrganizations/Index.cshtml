@@ -1,0 +1,95 @@
+﻿@model IEnumerable<DAI.Models.OwnerOrganization>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Імя)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Прізвище)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ПоБатькові)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ДатаНародження)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.АдресаПроживанняВласника)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.СеріяПаспорта)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.НомерПаспорта)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.НазваОрганізації)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Район)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Адреса)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Керівник)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Імя)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Прізвище)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ПоБатькові)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаНародження)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.АдресаПроживанняВласника)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.СеріяПаспорта)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.НомерПаспорта)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.НазваОрганізації)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Район)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Адреса)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Керівник)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.НомерЗапису">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.НомерЗапису">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.НомерЗапису">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

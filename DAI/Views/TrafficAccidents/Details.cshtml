@@ -1,0 +1,66 @@
+﻿@model DAI.Models.TrafficAccident
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>TrafficAccident</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ДатаTrafficAccident)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ДатаTrafficAccident)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.МісцеПодії)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.МісцеПодії)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.КороткийЗміст)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.КороткийЗміст)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.КількістьПостраждалих)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.КількістьПостраждалих)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.СумаЗбитків)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.СумаЗбитків)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Причина)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Причина)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ДорожніУмови)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ДорожніУмови)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ЗникненняВинуватця)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ЗникненняВинуватця)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.НомерTrafficAccident">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

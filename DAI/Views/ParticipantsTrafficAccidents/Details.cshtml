@@ -1,0 +1,48 @@
+﻿@model DAI.Models.ParticipantsTrafficAccident
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ParticipantsTrafficAccident</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Серія)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Серія)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.МаркаАвто)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.МаркаАвто)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.НомерTrafficAccidentNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.НомерTrafficAccidentNavigation.НомерTrafficAccident)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.НомерАвтоNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.НомерАвтоNavigation.КодАвто)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ТипМашиниNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ТипМашиниNavigation.КодЗапису)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.НомерЗапису">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

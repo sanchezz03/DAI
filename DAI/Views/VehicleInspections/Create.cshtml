@@ -1,0 +1,47 @@
+﻿@model DAI.Models.VehicleInspection
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>VehicleInspection</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="АвтоНаОгляд" class="control-label"></label>
+                <select asp-for="АвтоНаОгляд" class ="form-control" asp-items="ViewBag.АвтоНаОгляд"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="НомерКвитанціїСплатиПодатку" class="control-label"></label>
+                <input asp-for="НомерКвитанціїСплатиПодатку" class="form-control" />
+                <span asp-validation-for="НомерКвитанціїСплатиПодатку" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="СумаПлатежуЗаОгляд" class="control-label"></label>
+                <input asp-for="СумаПлатежуЗаОгляд" class="form-control" />
+                <span asp-validation-for="СумаПлатежуЗаОгляд" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ПеревіреноТехнічніХарактеристики" class="control-label"></label>
+                <input asp-for="ПеревіреноТехнічніХарактеристики" class="form-control" />
+                <span asp-validation-for="ПеревіреноТехнічніХарактеристики" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

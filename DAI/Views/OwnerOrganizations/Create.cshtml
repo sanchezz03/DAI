@@ -1,0 +1,78 @@
+﻿@model DAI.Models.OwnerOrganization
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>OwnerOrganization</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Імя" class="control-label"></label>
+                <input asp-for="Імя" class="form-control" />
+                <span asp-validation-for="Імя" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Прізвище" class="control-label"></label>
+                <input asp-for="Прізвище" class="form-control" />
+                <span asp-validation-for="Прізвище" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ПоБатькові" class="control-label"></label>
+                <input asp-for="ПоБатькові" class="form-control" />
+                <span asp-validation-for="ПоБатькові" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="АдресаПроживанняВласника" class="control-label"></label>
+                <input asp-for="АдресаПроживанняВласника" class="form-control" />
+                <span asp-validation-for="АдресаПроживанняВласника" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="СеріяПаспорта" class="control-label"></label>
+                <input asp-for="СеріяПаспорта" class="form-control" />
+                <span asp-validation-for="СеріяПаспорта" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="НомерПаспорта" class="control-label"></label>
+                <input asp-for="НомерПаспорта" class="form-control" />
+                <span asp-validation-for="НомерПаспорта" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="НазваОрганізації" class="control-label"></label>
+                <input asp-for="НазваОрганізації" class="form-control" />
+                <span asp-validation-for="НазваОрганізації" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Район" class="control-label"></label>
+                <input asp-for="Район" class="form-control" />
+                <span asp-validation-for="Район" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Адреса" class="control-label"></label>
+                <input asp-for="Адреса" class="form-control" />
+                <span asp-validation-for="Адреса" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Керівник" class="control-label"></label>
+                <input asp-for="Керівник" class="form-control" />
+                <span asp-validation-for="Керівник" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

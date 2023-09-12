@@ -1,0 +1,42 @@
+﻿@model DAI.Models.Search
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Search</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.КодАвто)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.КодАвто)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.КодВласника)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.КодВласника)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ДатаПропажі)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ДатаПропажі)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ВмістБагажуСалону)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ВмістБагажуСалону)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.КодЗапису">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

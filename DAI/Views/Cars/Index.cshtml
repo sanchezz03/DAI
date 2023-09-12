@@ -1,0 +1,95 @@
+﻿@model IEnumerable<DAI.Models.Car>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.НомернийЗнак)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Серія)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.МаркаАвтомобіля)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ДатаВипуску)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ОбємДвигуна)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.НомериДвигуна)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Шасі)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кузов)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Колір)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ДатаОстанньогоТехогляду)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.КатегоріяNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.НомернийЗнак)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Серія)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.МаркаАвтомобіля)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаВипуску)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ОбємДвигуна)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.НомериДвигуна)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Шасі)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Кузов)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Колір)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаОстанньогоТехогляду)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КатегоріяNavigation.КодЗапису)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.КодАвто">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.КодАвто">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.КодАвто">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<DAI.Models.VehicleInspection>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.НомерКвитанціїСплатиПодатку)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.СумаПлатежуЗаОгляд)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ПеревіреноТехнічніХарактеристики)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ДатаОгляду)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.АвтоНаОглядNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.НомерКвитанціїСплатиПодатку)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.СумаПлатежуЗаОгляд)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ПеревіреноТехнічніХарактеристики)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаОгляду)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.АвтоНаОглядNavigation.КодАвто)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.НомерОгляду">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.НомерОгляду">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.НомерОгляду">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

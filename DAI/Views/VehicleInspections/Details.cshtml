@@ -1,0 +1,48 @@
+﻿@model DAI.Models.VehicleInspection
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>VehicleInspection</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.НомерКвитанціїСплатиПодатку)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.НомерКвитанціїСплатиПодатку)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.СумаПлатежуЗаОгляд)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.СумаПлатежуЗаОгляд)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ПеревіреноТехнічніХарактеристики)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ПеревіреноТехнічніХарактеристики)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ДатаОгляду)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ДатаОгляду)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.АвтоНаОглядNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.АвтоНаОглядNavigation.КодАвто)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.НомерОгляду">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

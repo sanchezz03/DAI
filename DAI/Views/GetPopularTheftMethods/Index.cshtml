@@ -1,0 +1,25 @@
+﻿@model List<DAI.Models.GetPopularTheftMethods> 
+
+@{
+    ViewData["Title"] = "Popular Theft Methods";
+}
+
+<h1>Popular Theft Methods</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Найпопулярніший Спосіб Викрадення</th>
+            <th>Кількість Викрадень</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var method in Model)
+        {
+            <tr>
+                <td>@method.Найпопулярніший_Спосіб_Викрадення</td>
+                <td>@method.Кількість_Викрадень</td>
+            </tr>
+        }
+    </tbody>
+</table>

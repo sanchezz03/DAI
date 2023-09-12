@@ -1,0 +1,77 @@
+﻿@model IEnumerable<DAI.Models.TrafficAccident>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ДатаTrafficAccident)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.МісцеПодії)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.КороткийЗміст)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.КількістьПостраждалих)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.СумаЗбитків)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Причина)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ДорожніУмови)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЗникненняВинуватця)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаTrafficAccident)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.МісцеПодії)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КороткийЗміст)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КількістьПостраждалих)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.СумаЗбитків)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Причина)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДорожніУмови)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ЗникненняВинуватця)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.НомерTrafficAccident">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.НомерTrafficAccident">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.НомерTrafficAccident">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

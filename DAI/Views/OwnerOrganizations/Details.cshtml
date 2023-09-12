@@ -1,0 +1,84 @@
+﻿@model DAI.Models.OwnerOrganization
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>OwnerOrganization</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Імя)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Імя)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Прізвище)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Прізвище)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ПоБатькові)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ПоБатькові)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ДатаНародження)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ДатаНародження)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.АдресаПроживанняВласника)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.АдресаПроживанняВласника)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.СеріяПаспорта)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.СеріяПаспорта)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.НомерПаспорта)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.НомерПаспорта)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.НазваОрганізації)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.НазваОрганізації)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Район)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Район)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Адреса)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Адреса)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Керівник)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Керівник)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.НомерЗапису">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

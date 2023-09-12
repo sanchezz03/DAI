@@ -1,0 +1,29 @@
+﻿@model List<DAI.Models.WantedCar> 
+
+@{
+    ViewData["Title"] = "Wanted Cars List";
+}
+
+<h1>Wanted Cars List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Код запису</th>
+            <th>Номерний знак</th>
+            <th>Дата пропажі</th>
+            <th>Вміст багажу салону</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model)
+        {
+            <tr>
+                <td>@car.Код_запису</td>
+                <td>@car.Номерний_знак</td>
+                <td>@car.Дата_пропажі.ToShortDateString()</td>
+                <td>@car.Вміст_багажу_салону</td>
+            </tr>
+        }
+    </tbody>
+</table>

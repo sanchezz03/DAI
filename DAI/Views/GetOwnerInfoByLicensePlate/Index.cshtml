@@ -1,0 +1,50 @@
+﻿@model List<DAI.Models.GetOwnerInfoByLicensePlate>
+@{
+    ViewData["Title"] = "Owner Information";
+}
+
+<h1>Owner Information</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Surname
+            </th>
+            <th>
+                Middle Name
+            </th>
+            <th>
+                Date of Birth
+            </th>
+            <th>
+                Address
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Імя)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Прізвище)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.По_батькові)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Дата_народження)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Адреса_проживання_власника)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+﻿using DAI.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+
+namespace DAI.Controllers
+{
+    public class VehicleInfoController : Controller
+    {
+        private readonly DAIContext _context;
+        public VehicleInfoController(DAIContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<ActionResult> Index(string LicensePlate = "IJ2345IJ")
+        {
+            var parameters = new[]
+            {
+                new SqlParameter("@LicensePlate", LicensePlate)
+            };
+
+            var query = @"EXEC GetVehicleInfo @LicensePlate";
+
+            var clients = await _context.VehicleInfos.FromSqlRaw(query, parameters).ToListAsync();
+
+            return View(clients);
+        }
+    }
+}
